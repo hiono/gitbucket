@@ -1,0 +1,10 @@
+gitbucket:
+  image: hiono/gitbucket
+  volumes:
+   - data:/var/gitbucket
+   - gitbucket.conf:/var/gitbucket/gitbucket.conf:ro
+  environment:
+   GITBUCKET_HOME: "/var/gitbucket"
+  expose:
+    - "8080"
+    - "29418"
