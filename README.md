@@ -5,7 +5,7 @@ Setup a container with GitBucket installed.
 # Usage
 To run the container, do the following:
 
-% docker run -d -p 8080:8080 -p 29418:29418 -v ${PWD}/data:/gitbucket hiono/gitbucket
+    % docker run -d -p 8080:8080 -p 29418:29418 -v ${PWD}/data:/gitbucket hiono/gitbucket
 
 You can see gitbucket running on 
 You also see gitbucket data write out to "./data".
