@@ -1,0 +1,19 @@
+notification=true
+ldap.port=389
+allow_account_registration=false
+ldap.host=ldap.example.com
+ldap.mail_attribute=mail
+base_url=http\://example.com/gitbucket
+smtp.from_name=GitBucket Admin
+is_create_repository_option_public=true
+ssh.port=29418
+ssh=true
+ldap.baseDN=ou\=people,o\=example
+ldap_authentication=true
+ldap.fullname_attribute=cn
+ldap.username_attribute=uid
+allow_anonymous_access=true
+smtp.port=25
+smtp.from_address=dummy@example.com
+gravatar=true
+smtp.host=mail.example.com
