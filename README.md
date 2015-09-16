@@ -18,7 +18,7 @@ In order to access the git repository over SSH (port 29418), check settings belo
 
 To build the image, do the following:
 
-    % docker build github.com/hiono/docker-gitbucket
+    % docker build github.com/hiono/gitbucket
 
 A prebuilt container is available in the docker index.
 
