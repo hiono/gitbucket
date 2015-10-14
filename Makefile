@@ -23,6 +23,7 @@ Dockerfile: Dockerfile.in
 	git add $@
 	git commit -m "Gitbucket version: ${GITBUCKET_VERSION}"
 	git tag ${GITBUCKET_VERSION}
+	git pull
 	git push
 
 clean:
