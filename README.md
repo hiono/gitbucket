@@ -14,6 +14,12 @@ In order to access the git repository over SSH (port 29418), check settings belo
 
   - GitBucket > Administration > System Settings > SSH access
 
+# Dockerfile
+
+To generate the Dockerfile, do the following:
+
+    % make all
+
 # Building
 
 To build the image, do the following:
