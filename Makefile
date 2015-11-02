@@ -1,5 +1,5 @@
 .PHONY: CURRENT_VERSION
-GITBUCKET_RELEASE := $(shell wget -q --max-redirect=0 -S -O - https://github.com/takezoe/gitbucket/releases/latest 2>&1 | grep -e 'Location: ' | grep -o "http.*")
+GITBUCKET_RELEASE := $(shell wget -q --max-redirect=1 -S -O - https://github.com/takezoe/gitbucket/releases/latest 2>&1 | grep -e 'Location: ' | grep -o "http.*" | grep -v "tag")
 GITBUCKET_VERSION := $(shell echo $(GITBUCKET_RELEASE) | sed -e "s!^http.*/tag/!!")
 DOWNLOAD_URL := https://github.com/takezoe/gitbucket/releases/download/$(GITBUCKET_VERSION)/gitbucket.war
 $(info GITBUCKET_RELEASE $(GITBUCKET_RELEASE))
