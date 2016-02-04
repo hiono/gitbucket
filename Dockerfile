@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM tomcat:8-jre8
 MAINTAINER hiono <bps@sculd.com>
 LABEL version=3.11
 ENV DEBIAN_FRONTEND=noninteractive TERM=xterm GITBUCKET_HOME=/var/gitbucket
