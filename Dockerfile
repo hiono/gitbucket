@@ -1,10 +1,10 @@
 FROM tomcat:8-jre8
 MAINTAINER hiono <bps@sculd.com>
-LABEL version=4.1
+LABEL version=
 ENV DEBIAN_FRONTEND=noninteractive TERM=xterm GITBUCKET_HOME=/var/gitbucket
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
-Add https://github.com/takezoe/gitbucket/releases/download/4.1/gitbucket.war /usr/local/tomcat/webapps/ROOT.war
-RUN (cd /usr/local/tomcat/webapps; ln -s ROOT.war gitbucket-4.1)
+Add https://github.com/takezoe/gitbucket/releases/download//gitbucket.war /usr/local/tomcat/webapps/ROOT.war
+RUN (cd /usr/local/tomcat/webapps; ln -s ROOT.war gitbucket-)
 RUN (mkdir -p $GITBUCKET_HOME/plugins; cd $GITBUCKET_HOME/plugins; wget -nv -r -A .jar -e robots=off -nd https://github.com/takezoe/gitbucket-gist-plugin/releases)
 VOLUME $GITBUCKET_HOME
 WORKDIR $GITBUCKET_HOME
