@@ -1,4 +1,4 @@
-FROM tomcat:8-jre8
+FROM tomcat:9-alpine
 MAINTAINER hiono <bps@sculd.com>
 LABEL version=@GITBUCKET_VERSION@
 ENV DEBIAN_FRONTEND=noninteractive TERM=xterm GITBUCKET_HOME=/var/gitbucket
