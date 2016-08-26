@@ -33,3 +33,7 @@ A prebuilt container is available in the docker index.
 # GitBucket's license
 
 see https://github.com/takezoe/gitbucket
+
+# Image
+
+[![](https://images.microbadger.com/badges/image/hiono/gitbucket.svg)](https://microbadger.com/images/hiono/gitbucket "Get your own image badge on microbadger.com")
