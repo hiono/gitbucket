@@ -22,7 +22,7 @@ Dockerfile: Dockerfile.in
         -e "s!@GITBUCKET_VERSION@!${GITBUCKET_VERSION}!g" \
         -e "s!@DOWNLOAD_URL@!${DOWNLOAD_URL}!g" $< > $@
 	git add $@
-	git commit -m "Gitbucket version: ${GITBUCKET_VERSION}"
+	git commit -a -m "Gitbucket version: ${GITBUCKET_VERSION}"
 	git tag ${GITBUCKET_VERSION}
 	git pull --all
 	git push --all
