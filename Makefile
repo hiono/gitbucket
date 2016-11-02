@@ -1,4 +1,4 @@
-.PHONY: CURRENT_VERSION
+.PHONY: CURRENT_VERSION now
 GITBUCKET_RELEASE := $(shell wget -q --max-redirect=1 -S -O - https://github.com/takezoe/gitbucket/releases/latest 2>&1 | grep -e 'Location: ' | grep -o "http.*" | grep "tag")
 GITBUCKET_VERSION := $(shell echo $(GITBUCKET_RELEASE) | sed -e "s!^http.*/tag/!!")
 DOWNLOAD_URL := https://github.com/takezoe/gitbucket/releases/download/$(GITBUCKET_VERSION)/gitbucket.war
@@ -14,7 +14,7 @@ now:
 
 CURRENT_VERSION: now
 	if ! grep -q `cat now` CURRENT_VERSION; then cp $< $@; make clean; fi
-	rm -f $<
+	rm -f now
 
 Dockerfile: Dockerfile.in
 	echo ${GITBUCKET_VERSION}
