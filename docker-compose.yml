@@ -1,5 +1,5 @@
 gitbucket:
-  image: hiono/gitbucket
+  image: lightszentip/gitbucket
   volumes:
    - data:/var/gitbucket
    - gitbucket.conf:/var/gitbucket/gitbucket.conf:ro
