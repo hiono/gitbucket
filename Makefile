@@ -10,6 +10,7 @@ PLUGIN_GITBUCKET-GIST := https://github.com/takezoe/gitbucket-gist-plugin/releas
 all: CURRENT_VERSION Dockerfile
 
 now:
+	rm -f now
 	echo $(GITBUCKET_VERSION) > now
 
 CURRENT_VERSION: now
@@ -29,4 +30,4 @@ Dockerfile: Dockerfile.in
 	git push --tags
 
 clean:
-	rm -f Dockerfile
+	rm -f Dockerfile now
