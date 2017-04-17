@@ -7,7 +7,7 @@ $(info GITBUCKET_VERSION $(GITBUCKET_VERSION))
 $(info DOWNLOAD_URL $(DOWNLOAD_URL))
 PLUGIN_GITBUCKET-GIST := https://github.com/takezoe/gitbucket-gist-plugin/releases/
 
-all: CURRENT_VERSION Dockerfile
+all: CURRENT_VERSION Dockerfile commit push
 
 now:
 	rm -f now
@@ -22,9 +22,13 @@ Dockerfile: Dockerfile.in
 	sed -e "s!@GITBUCKET_RELEASE@!${GITBUCKET_RELEASE}!g" \
         -e "s!@GITBUCKET_VERSION@!${GITBUCKET_VERSION}!g" \
         -e "s!@DOWNLOAD_URL@!${DOWNLOAD_URL}!g" $< > $@
-	git add $@
+
+commit: Dockerfile
+	git add $<
 	git commit -a -m "Gitbucket version: ${GITBUCKET_VERSION}"
 	git tag ${GITBUCKET_VERSION}
+
+push:
 	git pull --all
 	git push --all
 	git push --tags
