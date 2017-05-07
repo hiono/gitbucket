@@ -36,4 +36,4 @@ see https://github.com/takezoe/gitbucket
 
 # Image
 
-[![](https://images.microbadger.com/badges/image/hiono/gitbucket.svg)](https://microbadger.com/images/hiono/gitbucket "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/lightszentip/gitbucket.svg)](https://microbadger.com/images/lightszentip/gitbucket "Get your own image badge on microbadger.com")
