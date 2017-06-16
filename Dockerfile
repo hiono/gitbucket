@@ -1,6 +1,6 @@
 FROM tomcat:9-alpine
 MAINTAINER lightszentip
-LABEL version=4.12.1
+LABEL version=4.13
 ENV DEBIAN_FRONTEND=noninteractive TERM=xterm GITBUCKET_HOME=/var/gitbucket
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 Add https://github.com/takezoe/gitbucket/releases/download/4.13/gitbucket.war /usr/local/tomcat/webapps/ROOT.war
