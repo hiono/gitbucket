@@ -24,7 +24,7 @@ Dockerfile: Dockerfile.in
         -e "s!@DOWNLOAD_URL@!${DOWNLOAD_URL}!g" $< > $@
 
 commit: Dockerfile
-	if ! (git status | sed -ne "s/.*modified:\s*// p" | grep -q $<) ; then \
+	if (git status | sed -ne "s/.*modified:\s*// p" | grep -q $<) ; then \
 		git pull --all ;\
 		git add $< ;\
 		git commit -a -m "Gitbucket version: ${GITBUCKET_VERSION}" ;\
