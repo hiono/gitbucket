@@ -5,7 +5,7 @@ Setup a container with GitBucket installed.
 # Usage
 To run the container, do the following:
 
-    % docker run -d -p 8080:8080 -p 29418:29418 -v ${PWD}/data:/gitbucket lightszentip/gitbucket
+    % docker run -d -p 8080:8080 -p 29418:29418 -v ${PWD}/data:/var/gitbucket lightszentip/gitbucket
 
 You can see gitbucket running on 
 You also see gitbucket data write out to "./data".
@@ -24,11 +24,11 @@ To generate the Dockerfile, do the following:
 
 To build the image, do the following:
 
-    % docker build github.com/hiono/gitbucket
+    % docker build github.com/lightszentip/gitbucket
 
 A prebuilt container is available in the docker index.
 
-    % docker pull hiono/gitbucket
+    % docker pull lightszentip/gitbucket
 
 # GitBucket's license
 
